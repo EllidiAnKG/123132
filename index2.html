@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Музыкальное приложение</title>
+</head>
+<body>
+    <header>
+        <h1>Музыкальное приложение</h1>
+        <input type="text" id="search" placeholder="Поиск по названию, исполнителю или альбому">
+        <select id="genreFilter">
+            <option value="">Выберите жанр</option>
+            <option value="pop">Поп</option>
+            <option value="rock">Рок</option>
+            <option value="hiphop">Хип-хоп</option>
+            <!-- Добавьте другие жанры по желанию -->
+        </select>
+        <button id="searchButton">Поиск</button>
+    </header>
+
+    <main>
+        <section id="popularTracks">
+            <h2>Популярные треки</h2>
+            <ul id="trackList"></ul>
+        </section>
+
+        <section id="playlists">
+            <h2>Плейлисты</h2>
+            <button id="createPlaylist">Создать плейлист</button>
+            <ul id="playlistList"></ul>
+        </section>
+
+        <section id="uploadTrackSection">
+            <h2>Загрузка трека</h2>
+            <input type="text" id="trackName" placeholder="Название трека">
+            <input type="text" id="trackArtist" placeholder="Исполнитель">
+            <input type="text" id="trackAlbum" placeholder="Альбом">
+            <input type="file" id="trackFile" accept=".mp3">
+            <button id="uploadTrackButton">Загрузить трек</button>
+        </section>
+    </main>
+
+    <div id="playlistModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Создать плейлист</h2>
+            <input type="text" id="playlistName" placeholder="Название плейлиста">
+            <button id="savePlaylist">Сохранить</button>
+        </div>
+    </div>
+
+    <script src="./index2.js"></script>
+</body>
+</html>
